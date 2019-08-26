@@ -16,7 +16,7 @@ class Character:
     self.health_max = 1
     self.experience = 0
     self.max_experience = 5
-    self.class = ""	
+    self.classe = ""	
     self.profession = ""	
   def do_damage(self, enemy):
     damage = min(
@@ -118,7 +118,7 @@ Commands = {
  
 p = Player()
 p.name = raw_input("Cual es el nombre de tu personaje? ")
-p.class = raw_input("Cual es tu clase " + str(p.name) + "? " )
+p.classe = raw_input("Cual es tu clase " + str(p.name) + "? " )
 p.profession = raw_input("Y cual es tu oficio?")
 print "(escribe help para ver una lista de acciones)\n"
 print "%s entra en una cueva oscura, buscando aventuras." % p.name
