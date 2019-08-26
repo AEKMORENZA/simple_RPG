@@ -16,6 +16,8 @@ class Character:
     self.health_max = 1
     self.experience = 0
     self.max_experience = 5
+    self.class = ""	
+    self.profession = ""	
   def do_damage(self, enemy):
     damage = min(
         max(randint(0, self.health) - randint(0, enemy.health), 0),
@@ -24,12 +26,17 @@ class Character:
     if damage == 0: print "%s esquiva el ataque de %s." % (enemy.name, self.name)
     else: print "%s hiere a %s!" % (self.name, enemy.name)
     return enemy.health <= 0
- 
+
 class Enemy(Character):
   def __init__(self, player):
     Character.__init__(self)
-    self.name = 'un goblin'
-    self.health = randint(1, player.health)
+    self.health = randint(1, player.health)	
+
+class Goblin(Enemy):
+  def __init__(self, enemy):
+    Enenmy.__init__(self)
+    Self.name = 'Un Goblin'
+    self.helth = randint(1, player.helath)	
  
 class Player(Character):
   def __init__(self):
@@ -111,6 +118,8 @@ Commands = {
  
 p = Player()
 p.name = raw_input("Cual es el nombre de tu personaje? ")
+p.class = raw_input("Cual es tu clase " + str(p.name) + "? " )
+p.profession = raw_input("Y cual es tu oficio?")
 print "(escribe help para ver una lista de acciones)\n"
 print "%s entra en una cueva oscura, buscando aventuras." % p.name
  
