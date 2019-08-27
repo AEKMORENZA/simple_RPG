@@ -34,9 +34,9 @@ class Enemy(Character):
 
 class Goblin(Enemy):
   def __init__(self, enemy):
-    Enenmy.__init__(self)
-    Self.name = 'Un Goblin'
-    self.helth = randint(1, player.helath)	
+    Enemy.__init__(self)
+    self.name = 'Un Goblin'
+    self.health = randint(1, player.helath)	
  
 class Player(Character):
   def __init__(self):
